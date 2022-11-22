@@ -1,34 +1,46 @@
-function onEvent(event, selector, callback) {
 
-    return selector.addEventListener(event, callback);
+const Availcolors = {
+    Blue: '#09f',
+    Green: '#9f0',
+    Orange: '#f90',
+    Pink: '#f09',
+    Purple: '#90f'
+};
 
-}
-function getElement(selector, parent = document) {
-    return parent.getElementById(selector);
-}
-
-function select(selector, parent = document) {
-    return parent.querySelector(selector);
-
-}
-
-
-function print(arg) {
-    console.log(arg);
-}
-
-const morebtn = select('.more-btn');
-const main = select('.main-box');
+import { onEvent, getElement, select, print } from "./utils.js";
+import Shape from "./Shape.js";
 
 
 
-// main.innerTEXT = "<div class='column two'></div>";
+const shape = select('.shape');
+const color = select('.color');
+const create = select('.create');
+const middle = select('.middle');
+const info = select('.info');
+const index  =[];
+const newIndex = new Shape (index, color.value);
 
-onEvent('click', morebtn, function() {
-    console.log('hello');
+onEvent('click', create, function () {
+    if(index.length > 19){
+        return;
+    }
+    const elementOne = document.createElement("div");
+    middle.appendChild(elementOne);
+    elementOne.classList.add(shape.value);
+    elementOne.style.backgroundColor = Availcolors[color.value];
     
 
-});
 
+    index.push(elementOne);
+    print(index);
+
+    onEvent('click', elementOne, function(){
+    
+        // info.innerText = `${newIndex}`;
+        print(newIndex);
+        // info.innerText = `Index:${index.indexOf(elementOne) + 1}`;
+
+    });
+});
 
 

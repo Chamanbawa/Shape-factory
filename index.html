@@ -10,7 +10,7 @@
     <title>Shape Factory</title>
     <link rel="shortcut icon " href="./assets/img/google.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/style/index.css" media="all">
-    <script src="./assets/scripts/index.js" defer></script>
+    <script src="./assets/scripts/index.js" type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100&display=swap"
@@ -28,24 +28,27 @@
                 <div class="upper">
                     <form>
                         <select name="shape" class="shape" >
-                          <option value=" circle">Circle</option>
-                            <option value="square">Square</option>
+                            <option value="" disabled selected hidden>Select Shape</option>
+
+                          <option value="circle" class="circle">Circle</option>
+                            <option value="square" class="square">Square</option>
                         </select>
                         <select name="color" class="color">
-                            <option value="blue">Blue</option>
-                            <option value="green">Green</option>
-                            <option value="orange">Orange</option>
-                            <option value="pink">Pink</option>
-                            <option value="purple">Purple</option>
+                            <option value="" disabled selected hidden>Select Color</option>
+                            <option value="Orange" class="orange">Orange</option>
+                            <option value="Blue" class="blue">Blue</option>
+                            <option value="Purple" class="purple">Purple</option>
+                            <option value="Pink" class="pink">Pink</option>
+                            <option value="Green" class="green">Green</option>
                         </select>
                     </form>
                     <button class="create">Create</button>
-
+                    
                 </div>
+                <div class="info"><p></p></div>
                 <div class="main-box">
                     <div class="middle"></div>
-                    <div class="bottom"></div>
-
+                    
                 </div>
             </div>
         </div>

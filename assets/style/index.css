@@ -17,12 +17,13 @@
 body {
     background-color: #000;
 }
+
 .container {
     width: min(100% - 30px, 1080px);
     margin: auto;
 }
 
-.center{
+.center {
     height: 100vh;
     display: grid;
     place-items: center;
@@ -30,27 +31,30 @@ body {
     position: relative;
 }
 
-.title{
-    color:#fff;
+.title {
+    color: #fff;
 }
 
 
-.upper{
-display: flex;
-width: 100%; 
-gap: 10px;
+.upper {
+    display: flex;
+    width: 100%;
+    gap: 10px;
 
 }
+
 .left {
     background-color: var(--app-orange);
     height: 100px;
     width: 100px;
 }
+
 .in-between {
     background-color: var(--app-blue);
     height: 100px;
     width: 100px;
 }
+
 .right {
     background-color: var(--app-green);
     height: 100px;
@@ -63,37 +67,74 @@ form {
     display: flex;
     gap: 10px;
 }
-.color,.shape {
+
+.color,
+.shape {
+    appearance: none;
     width: 100%;
-    padding:5px;
+    padding: 5px;
     height: 46px;
-    text-align: left;
+    text-align: center;
     border-radius: 10px;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     inset: auto 50px 50px auto;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px;
     background-color: var(--app-dark-bg);
 }
-.create{
-        width: 120px;
-        padding:5px;
-        height: 46px;
-        text-align: left;
-        border-radius: 10px;
-        color: #fff;
-        font-size: 18px;
-        inset: auto 50px 50px auto;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px;
-        background-color: var(--app-orange);
-    }
 
-.main-box{
-        background-color: var(--app-dark-bg);
-        height: 400px;
-        gap: 5px;
-        padding: 10px;
-        grid-template-columns: repeat(5, 100px);
-        display: grid; 
-        margin-top: 5px; 
-    }
+.create {
+    width: 120px;
+    padding: 5px;
+    height: 46px;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    inset: auto 50px 50px auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px;
+    background-color: var(--app-orange);
+}
+
+select {
+    font-size: 10px;
+}
+
+.main-box {
+    background-color: var(--app-dark-bg);
+    min-height: 400px;
+    gap: 5px;
+    padding: 10px;
+    
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.column{
+    width: 100px;
+    height: 100px;
+    background-color:#33ab4e ;
+}
+
+.info {
+    color: #fff;
+}
+.middle {
+    color: #fff;
+    grid-template-columns: repeat(5, 100px);
+    display: grid;
+    gap: 5px;
+    padding: 10px;
+}
+
+.square{
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+.circle{
+    height: 100px;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 50%;
+}
