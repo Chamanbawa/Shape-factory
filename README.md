@@ -1,6 +1,6 @@
 ## Click me if you can
 
-A simple Alarm clock  with JavaScript.
+A simple Shape Factory
 
 ### Demo
 
