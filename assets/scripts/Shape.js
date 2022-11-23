@@ -4,12 +4,9 @@ class Shape {
         this.color = color;
 
     }
-    getName() {
-        return this.name;
-    }
     
     getInfo() {
-
+ return `${this.color} ${this.name}`;
     }
 }
 

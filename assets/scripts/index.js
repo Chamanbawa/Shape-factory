@@ -1,7 +1,7 @@
 
 const Availcolors = {
     Blue: '#09f',
-    Green: '#9f0',
+    Green: '#33ab4e',
     Orange: '#f90',
     Pink: '#f09',
     Purple: '#90f'
@@ -17,30 +17,37 @@ const color = select('.color');
 const create = select('.create');
 const middle = select('.middle');
 const info = select('.info');
-const index  =[];
-const newIndex = new Shape (index, color.value);
+const index = [];
 
 onEvent('click', create, function () {
-    if(index.length > 19){
-        return;
+
+    if ( shape.value === "" || color.value === "") {
+        info.innerText = "Please Select Both Input!";
     }
-    const elementOne = document.createElement("div");
-    middle.appendChild(elementOne);
-    elementOne.classList.add(shape.value);
-    elementOne.style.backgroundColor = Availcolors[color.value];
-    
+    else{
+    if (index.length < 19) {
+        info.innerText = "";
+        let newIndex = new Shape(shape.value, color.value);
+        index.push(newIndex);
+        
+        const elementOne = document.createElement("div");
+        
+        middle.appendChild(elementOne);
+        elementOne.classList.add(shape.value);
+        elementOne.style.backgroundColor = Availcolors[color.value];
+        
+        onEvent('click', elementOne, function () {
+
+            let indices = index.indexOf(newIndex) + 1;
+            info.innerText = `Unit:${indices} color: ${newIndex.getInfo()}`;
+
+        });    
+    } else {
+        info.innerText = 'Storage is Full!';
+    }  
+}  
+});    
 
 
-    index.push(elementOne);
-    print(index);
-
-    onEvent('click', elementOne, function(){
-    
-        // info.innerText = `${newIndex}`;
-        print(newIndex);
-        // info.innerText = `Index:${index.indexOf(elementOne) + 1}`;
-
-    });
-});
 
 
