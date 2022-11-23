@@ -25,7 +25,7 @@ onEvent('click', create, function () {
         info.innerText = "Please Select Both Input!";
     }
     else{
-    if (index.length < 19) {
+    if (index.length < 20) {
         info.innerText = "";
         let newIndex = new Shape(shape.value, color.value);
         index.push(newIndex);
